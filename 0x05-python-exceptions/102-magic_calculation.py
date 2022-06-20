@@ -9,9 +9,9 @@ def magic_calculation(a, b):
         try:
             if i > a:
                 raise Exception('Too far')
-
-            result += a ** b / i
-        except 'Too far':
+            else:
+                result += a ** b / i
+        except ZeroDivisionError:
             result = b + a
             break
 
